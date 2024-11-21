@@ -15,3 +15,6 @@ EXPOSE 25565
 
 # Default command to run the Minecraft server
 CMD ["start"]
+
+# Change the permissions of the server files
+RUN chmod -R 755 /data && chown -R 1000:1000 /data
